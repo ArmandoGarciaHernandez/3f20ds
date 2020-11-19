@@ -1,17 +1,23 @@
 let x = 3;
-let y = [x];
-let impares = [];
+let unpair = x;
+let z = 10;
+let y = 0; //index
+let arr = [];
 
-for (let i = 0; i < 42; i++) {
-  y += 1;
-  if (i % 2 !== 0) {
-    if (i % 3 !== 0) {
-      if (i % 5 !== 0) {
-        if (i % 11 !== 0) {
-          impares.push([i]);
-        }
-      }
+let esPrimo = (numero) => {
+  for (var i = 2; i < numero; i++) {
+    if (numero % i === 0) {
+      return false;
     }
   }
+  return true;
 }
-console.log('Números Primos: ' + impares);
+
+while (y < z) {
+  if (esPrimo(unpair)) {
+    arr.push(unpair);  
+    y++;
+  }
+  unpair++;
+}
+console.log(arr);
